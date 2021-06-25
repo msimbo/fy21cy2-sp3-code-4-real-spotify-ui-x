@@ -1,15 +1,268 @@
 
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Spotify</title>
-    <div> Hi day</div>
-
+    <link rel="stylesheet" href="style_compiled.css">
 </head>
-<body>
+<body class="font-body">
+
+<div class=" flex h-full bg-gradient-to-r from-blue-300 to-black">
+    <aside class=" text-left flex-row leading-10  px-4 bg-black pt-6">
+
+        <div class="px-9 mb-6 ">
+            <div class="bg-gray-200 bg-opacity-20 flex font-medium items-center px-4 py-2 rounded text-sm text-white hover:opacity-100">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                </svg>
+
+             <span class="p-1">Home</span>
+            </div>
+
+            <div class="flex font-medium items-center px-4 py-2 rounded text-sm text-white opacity-50 hover:opacity-100">
+                <svg class="h-6 mr-4"viewBox="0 0 512 512"width="24"height="24"xmlns="http://www.w3.org/2000/svg">
+                <path d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z"fill="currentColor"
+                    </path>
+                </svg>
+                <span>Search</span>
+            </div>
+            <!--icon library/ text-->
+            <div class="flex font-medium items-center px-4 py-2 rounded text-sm text-white opacity-50 hover:opacity-100">
+                <svg class="h-6 mr-4"viewBox="0 0 512 512"width="24"height="24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
+                            fill="currentColor"></path>
+                </svg>
+
+               <span>Your Library</span>
+            </div>
+
+
+            <br>
+            <!--Playlist-->
+
+            <h3 class="text-xs text-gray-100 uppercase text-sm text-white opacity-50 hover:opacity-100 mb-4 " >
+                <Playlists
+
+            </h3>
+
+            <!-- Icon/Create playlist-->
+            <div class=" ">
+                <div class=" flex items-center flex-nowrap text-sm text-white opacity-50 hover:opacity-100">
+                    <svg class="bg-white fill-current h-8 mr-4 p-1 text-black " shape-rendering="crispEdges" viewBox="0 0 36 36">
+                        <path d="m28 20h-8v8h-4v-8h-8v-4h8v-8h4v8h8v4z"></path>
+                    </svg>
+                    Create Playlist
+                </div>
+
+                <div class=" flex items-center flex-nowrap text-sm text-white opacity-50 hover:opacity-100">
+                    <svg class="fill-current h-8 mr-4 p-2 w-8" viewBox="0 0 20 20">
+                        <path d="M10 3.22l-.61-.6a5.5 5.5 0 0 0-7.78 7.77L10 18.78l8.39-8.4a5.5 5.5 0 0 0-7.78-7.77l-.61.61z"/>
+                    </svg>
+                    Liked Songs
+                </div>
+            </div>
+
+            <hr class="border-gray-100 "/>
+
+            <div>
+
+                <div class=" my-3	flex flex-col text-sm text-white opacity-50 hover:opacity-100">
+                    2021 Greatest Songs
+                </div>
+
+                <div class="  my-3 flex flex-col text-sm  text-white opacity-50 hover:opacity-100">
+                    At Work
+                </div>
+
+            <div class=" my-3 flex flex-col  text-sm text-white opacity-50 hover:opacity-100">
+                Playlist #2
+            </div>
+
+            <div class="my-3 flex flex-col  text-sm text-white opacity-50 hover:opacity-100">
+                Playlist #4
+            </div>
+
+            <div class="my-3 flex flex-col  text-sm text-white opacity-50 hover:opacity-100">
+                Rap Caviar
+            </div>
+
+
+        </div>
+        </div>
+    </aside>
+
+<!--Nav main section-->
+
+    <main class="col-span-5 row-span-3 overflow-auto">
+
+        <div class="px-6 py-4 mb-6 flex items-center justify-between sticky top-0 z-10">
+
+        <!-- Left/ right arrows header-->
+            <div class="flex items-center">
+                <button class="bg-black rounded-full w-8 h-8 text-white mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+
+                 <button class="h-8 w-8 bg-black rounded-full text-white ">
+                <svg class="h-5 w-5 m-auto" viewBox="0 0 24 24">
+                    <path fill="currentColor"  d="M7.96 21.15l-.65-.76 9.555-8.16L7.31 4.07l.65-.76 10.445 8.92">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+
+
+        <!--right side Jasmine B image icon button w/Jasmine-->
+
+            <div class="relative">
+                <button class="bg-black rounded-full py-1 px-2 flex items-center">
+                    <img src="Images/jasmineusernamespotify.jpg" class="rounded-full h-7 w-7 mr-2">
+                    <a href="#" class="text-white  text-xs mr-2">Jasmine Bien-Aime</a>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+            </div>
+</div>
+
+
+
+
+        <!-- Main, includes greeting texts grid col music label cards-->
+
+        <div class=" px-6 py-3 flex items-center">
+            <h1 class="font-body text-4xl text-white font-bold">Good Afternoon</h1>
+        </div>
+
+
+        <div class="grid grid-cols-3 gap-4 mx-6">
+
+            <div class="bg-gray-500 bg-opacity-20 h-20 flex justify-start items-center rounded col-span-1 text-white text-sm font-semibold	">
+                <img src="asset%2034.jpeg" class="h-20 w-20 mr-5 rounded-tl-md rounded-bl-md ">
+                <h1>Release Radar</h1>
+            </div>
+
+            <div class="bg-gray-500 bg-opacity-20 h-20 flex justify-start items-center rounded col-span-1 text-white text-sm font-semibold	">
+                <img src="asset%2037.jpeg" class="h-20 w-20 mr-5 rounded-tl-md rounded-bl-md">
+                <h1>Summer Breakout</h1>
+            </div>
+
+            <div class="bg-gray-500 bg-opacity-20 h-20 flex justify-start items-center rounded col-span-1 text-white text-sm font-semibold	">
+                <img src="asset%2016.jpeg" class="h-20 w-20 mr-5 rounded-tl-md rounded-bl-md">
+                <h1>Discover Weekly</h1>
+            </div>git
+
+            <div class="bg-gray-600 bg-opacity-20 h-20 flex justify-start items-center rounded col-span-1 text-white text-sm font-semibold	">
+                <img src="asset%207.jpeg" class="h-20 w-20 mr-5 rounded-tl-md rounded-bl-md">
+                <h1>Daily Mix 1</h1>
+            </div>
+
+
+            <div class="bg-gray-500 bg-opacity-20 h-20 flex justify-start items-center rounded col-span-1 text-white text-sm font-semibold	">
+                <img src="asset%2014.jpeg" class="h-20 w-20 mr-5 rounded-tl-md rounded-bl-md">
+                <h1>Daily Mix 2</h1>
+            </div>
+
+
+            <div class="bg-gray-500 bg-opacity-20 h-20 flex justify-start items-center rounded col-span-1 text-white text-sm font-semibold	">
+                <img src="asset%2015.jpeg" class="h-20 w-20 mr-5 ">
+                <h1>Daily Mix 3</h1>
+            </div>
+
+        </div>
+
+        <!-- main music card header #2-->
+
+        <div class="px-6 my-5 flex items-center justify-between ">
+            <h1 class="text-xl text-white font-bold">Your heavy rotation</h1>
+            <a href="/#" class="font-semibold text-xs text-white ">SEE MORE</a>
+        </div>
+        <!-- main music card #2-->
+
+        <div class="flex p-3 justify-evenly ">
+
+                <div class="mx-3 bg-black bg-opacity-75  w-52 h-64 flex flex-col rounded-lg text-white">
+                    <img src="asset%2042.jpeg" alt="music" class="h-50 w-50 p-4 items-center">
+                    <div class="pl-4 text-left font-bold">Aretha Franklin </div>
+                    <div class="pl-4 pb-4 text-left text-xs">Respect.</div>
+                </div>
+
+            <div class=" mx-3 bg-black bg-opacity-75  w-52 h-64 flex flex-col rounded-lg text-white">
+                <img src="asset%2069.jpeg" alt="music" class="h-50 w-50 p-4 items-center">
+                <div class="pl-4 text-left font-bold">Dru Hill</div>
+                <div class="pl-4 pb-4 text-left text-xs">Beauty.</div>
+            </div>
+
+
+            <div class=" mx-3 bg-black bg-opacity-75  w-52 h-64 flex flex-col rounded-lg text-white">
+                <img src="asset%2062.jpg" alt="music" class="h-50 w-50 p-4 items-center">
+                <div class="pl-4 text-left font-bold">Summer Walker </div>
+                <div class="pl-4 pb-4 text-left text-xs">Nobody Else.</div>
+            </div>
+
+
+            <div class=" mx-3 bg-black bg-opacity-75  w-52 h-64 flex flex-col rounded-lg text-white">
+                <img src="asset%2074.jpeg" alt="music" class="h-50 w-50 p-4 items-center">
+                <div class="pl-4 text-left font-bold">Lauren Hill</div>
+                <div class="pl-4 pb-4 text-left text-xs">Nothing Even Matters.</div>
+            </div>
+
+
+            <div class=" mx-3 bg-black bg-opacity-75  w-52 h-64 flex flex-col rounded-lg text-white">
+                <img src="asset%2054.jpeg" alt="music" class="h-50 w-50 p-4 items-center">
+                <div class="pl-4 text-left font-bold">Mary J Blige </div>
+                <div class="pl-4 pb-4 text-left text-xs">Real Love.</div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+
+
+        </div>
+
+        </header>
+
+</div>
+</div>
+
+
+<!--footer/music bar-->
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
